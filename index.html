@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>La Spallettissima - Pitch Deck</title>
+    <title>La Spallettissima - Pitch Deck (Bozza)</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
@@ -23,9 +23,8 @@
             overflow-x: hidden; height: 100vh;
         }
 
-        /* Contenitore Principale */
         #presentation-container {
-            position: relative; width: 100vw; height: calc(100vh - 80px); /* Lascia spazio ai bottoni */
+            position: relative; width: 100vw; height: calc(100vh - 80px);
             overflow-y: auto; overflow-x: hidden; padding-bottom: 20px;
         }
 
@@ -44,15 +43,14 @@
             transform: translateX(0);
         }
 
-        /* Tipografia Mobile First */
         h1 { color: var(--primary); font-size: 2.2rem; margin-bottom: 10px; text-align: center; line-height: 1.2; }
         h2 { color: var(--accent); font-size: 1.6rem; margin-top: 10px; margin-bottom: 20px; text-align: center; }
         p { font-size: 1rem; line-height: 1.5; margin-bottom: 15px; }
         
-        .subtitle { text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 30px; }
+        .subtitle { text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 30px; font-style: italic; }
         .cite { font-size: 0.6rem; color: #ccc; vertical-align: super; }
+        .disclaimer { font-size: 0.85rem; color: #e67e22; text-align: center; font-weight: bold; margin-bottom: 15px; background: #fdf2e9; padding: 10px; border-radius: 8px;}
 
-        /* Design a Card (Grafica Visuale) */
         .card-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto; }
         .visual-card {
             background: var(--card-bg); padding: 15px 20px;
@@ -61,16 +59,15 @@
             border-left: 4px solid var(--primary);
         }
         .visual-card.accent { border-left-color: var(--accent); }
+        .visual-card.vision { border-left-color: #8e44ad; }
         .card-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; }
         .card-text h3 { margin: 0 0 5px 0; font-size: 1.1rem; color: var(--primary); }
         .card-text p { margin: 0; font-size: 0.95rem; color: #555; }
 
-        /* Layout Layout Split (Diventa affiancato su Desktop) */
         .split-layout { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 900px; margin: 0 auto; }
         .text-col, .chart-col { width: 100%; }
         .chart-col { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 
-        /* Controlli Fissi in basso (Touch friendly) */
         .controls {
             position: fixed; bottom: 0; left: 0; width: 100%; height: 80px;
             background: white; display: flex; justify-content: space-between; align-items: center;
@@ -84,7 +81,6 @@
         button:active { transform: scale(0.98); }
         button:disabled { background-color: #d1d8dd; color: #999; cursor: not-allowed; }
 
-        /* === MEDIA QUERIES PER DESKTOP/TABLET === */
         @media (min-width: 768px) {
             .slide { justify-content: center; align-items: center; padding: 40px; }
             h1 { font-size: 3.5rem; } h2 { font-size: 2.2rem; }
@@ -104,14 +100,15 @@
     <!-- Slide 1: Titolo -->
     <div class="slide active">
         <h1>La Spallettissima</h1>
-        <p class="subtitle">Progetto di Passaggio Generazionale 🤝 <span class="cite">[cite: 1]</span></p>
+        <p class="subtitle">Ipotesi di Passaggio Generazionale 🤝 <span class="cite">[cite: 1]</span></p>
+        <div class="disclaimer">⚠️ Attenzione: Le cifre e le tempistiche in questa presentazione sono stime e ipotesi di lavoro, soggette a futuri accordi e variazioni.</div>
         
-        <div class="card-container" style="margin-top: 20px;">
+        <div class="card-container" style="margin-top: 10px;">
             <div class="visual-card">
                 <div class="card-icon">🎯</div>
                 <div class="card-text">
-                    <h3>L'Obiettivo</h3>
-                    <p>Salvare una stamperia storica dalla chiusura e affidarla a una nuova generazione. <span class="cite">[cite: 1]</span></p>
+                    <h3>L'Idea di Base</h3>
+                    <p>Potenzialmente, vorremmo salvare una stamperia storica dalla chiusura e affidarla a una nuova generazione. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
         </div>
@@ -119,27 +116,20 @@
 
     <!-- Slide 2: L'Opportunità -->
     <div class="slide">
-        <h2>L'Opportunità 🚀</h2>
+        <h2>Un'Opportunità Ipotetica 🚀</h2>
         <div class="card-container">
             <div class="visual-card">
                 <div class="card-icon">💶</div>
                 <div class="card-text">
-                    <h3>I Numeri Attuali</h3>
-                    <p>Un'attività solida che genera 90.000 € netti all'anno (coprendo lo stipendio attuale dei titolari). <span class="cite">[cite: 1]</span></p>
+                    <h3>I Numeri di Partenza</h3>
+                    <p>L'attività attualmente genera circa 90.000 € netti all'anno (che oggi coprono lo stipendio dei titolari). <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
             <div class="visual-card">
                 <div class="card-icon">📈</div>
                 <div class="card-text">
-                    <h3>Potenziale Inespresso</h3>
-                    <p>Mantiene questi numeri nonostante 10 anni di "stagnazione" commerciale. <span class="cite">[cite: 1]</span></p>
-                </div>
-            </div>
-            <div class="visual-card accent">
-                <div class="card-icon">💡</div>
-                <div class="card-text">
-                    <h3>La Soluzione</h3>
-                    <p>Digitalizzazione e marketing locale per sbloccare enormi margini di crescita. <span class="cite">[cite: 1]</span></p>
+                    <h3>Potenziale di Crescita</h3>
+                    <p>L'azienda ha mantenuto questi numeri nonostante un decennio di "stagnazione" commerciale. <span class="cite">[cite: 1]</span> Con un approccio moderno le prospettive di crescita potrebbero essere ampie. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
         </div>
@@ -147,44 +137,44 @@
 
     <!-- Slide 3: Assetto Societario -->
     <div class="slide">
-        <h2>Struttura S.r.l. 🏛️</h2>
-        <p style="text-align:center;">Separazione netta dei ruoli per tutelare i patrimoni personali <span class="cite">[cite: 1]</span></p>
+        <h2>Possibile Assetto (S.r.l.) 🏛️</h2>
+        <p style="text-align:center;">L'idea sarebbe separare i ruoli per tutelare tutti <span class="cite">[cite: 1]</span>:</p>
         <div class="card-container">
             <div class="visual-card accent">
                 <div class="card-icon">👩‍💼</div>
                 <div class="card-text">
-                    <h3>Socie Operative (Amministratrici)</h3>
-                    <p>Autonomia al 100%, potere di firma e libertà totale sulle decisioni quotidiane. <span class="cite">[cite: 1]</span></p>
+                    <h3>Le Socie Operative (Amministratrici) <span class="cite">[cite: 1]</span></h3>
+                    <p><strong>Eva</strong> gestirebbe le pubbliche relazioni, i clienti e l'amministrazione. <br><strong>Nicole</strong> (con un periodo di tirocinio <span class="cite">[cite: 1]</span>) imparerebbe l'arte tipografica per diventare una grande stampatrice. Avrebbero autonomia e potere di firma. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
             <div class="visual-card">
                 <div class="card-icon">💼</div>
                 <div class="card-text">
-                    <h3>Soci Finanziatori</h3>
-                    <p>Apportano capitale e agiscono da sponsor esterni, limitandosi all'approvazione del bilancio. <span class="cite">[cite: 1]</span></p>
+                    <h3>I Soci Finanziatori</h3>
+                    <p>Potrebbero apportare le quote di capitale agendo da sponsor esterni, limitandosi all'approvazione del bilancio. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Slide 4: Sostenibilità con Grafico -->
+    <!-- Slide 4: Sostenibilità -->
     <div class="slide">
-        <h2>Sostenibilità (Dall'Anno 2) 📊</h2>
+        <h2>Ipotesi di Sostenibilità 📊</h2>
         <div class="split-layout">
             <div class="text-col">
-                <p>Basato su ricavi invariati di 90k€ (L'Anno 1 è "di comporto" e l'utile viene reinvestito) <span class="cite">[cite: 1]</span>:</p>
+                <p>Simulazione basata sui ricavi attuali <span class="cite">[cite: 1]</span> (ipotizzando un Anno 1 "di comporto" dove si reinveste tutto per stabilizzarsi <span class="cite">[cite: 1]</span>):</p>
                 <div class="visual-card">
                     <div class="card-icon">💰</div>
                     <div class="card-text">
-                        <h3>Stipendi (60.000 €)</h3>
-                        <p>Oltre 2.000 € netti/mese alle Socie <span class="cite">[cite: 1]</span>.</p>
+                        <h3>Stipendi (60.000 € stimati)</h3>
+                        <p>Potrebbero garantire oltre 2.000 €/mese alle Socie <span class="cite">[cite: 1]</span>.</p>
                     </div>
                 </div>
                 <div class="visual-card accent" style="margin-top:10px;">
                     <div class="card-icon">🏦</div>
                     <div class="card-text">
-                        <h3>Rate Debito (30.000 €)</h3>
-                        <p>20k ai vecchi soci, 10k ai finanziatori <span class="cite">[cite: 1]</span>.</p>
+                        <h3>Rate Debito (30.000 € stimati)</h3>
+                        <p>L'utile restante andrebbe a rimborsare gradualmente i fondatori e i finanziatori <span class="cite">[cite: 1]</span>.</p>
                     </div>
                 </div>
             </div>
@@ -194,24 +184,24 @@
         </div>
     </div>
 
-    <!-- Slide 5: Acquisto con Grafico -->
+    <!-- Slide 5: Acquisto -->
     <div class="slide">
-        <h2>Numeri dell'Accordo 🤝</h2>
+        <h2>Possibile Accordo 🤝</h2>
         <div class="split-layout">
             <div class="text-col">
-                <p>Acquisto rateizzato di 80.000 € totali <span class="cite">[cite: 1]</span>.</p>
+                <p>Si ipotizza un acquisto rateizzato valutabile in circa 80.000 € totali <span class="cite">[cite: 1]</span>.</p>
                 <div class="visual-card">
                     <div class="card-icon">🤝</div>
                     <div class="card-text">
-                        <h3>I Sostenitori (40.000 €)</h3>
-                        <p>Sostenitori privati mettono le quote iniziali <span class="cite">[cite: 1]</span>.</p>
+                        <h3>I Sostenitori (es. 40.000 €)</h3>
+                        <p>Investitori privati potrebbero mettere le quote di anticipo iniziale <span class="cite">[cite: 1]</span>.</p>
                     </div>
                 </div>
                 <div class="visual-card accent" style="margin-top:10px;">
                     <div class="card-icon">⏳</div>
                     <div class="card-text">
-                        <h3>Patto coi Fondatori (40.000 €)</h3>
-                        <p>Pagamento a rate negli anni tramite gli incassi <span class="cite">[cite: 1]</span>.</p>
+                        <h3>Patto coi Fondatori (es. 40.000 €)</h3>
+                        <p>Potrebbero accettare un pagamento rateale vincolato ai futuri incassi <span class="cite">[cite: 1]</span>.</p>
                     </div>
                 </div>
             </div>
@@ -223,31 +213,54 @@
 
     <!-- Slide 6: Transizione -->
     <div class="slide">
-        <h2>Squadra e Transizione 🔄</h2>
+        <h2>Ipotesi di Transizione 🔄</h2>
         <div class="card-container">
             <div class="visual-card">
                 <div class="card-icon">🎓</div>
                 <div class="card-text">
-                    <h3>Affiancamento & Tirocinio</h3>
-                    <p>Tirocinio Nicole (inizio 2026) e da Sett. 2027 affiancamento (6 mesi full + 6 part-time). <span class="cite">[cite: 1]</span></p>
+                    <h3>Affiancamento Flessibile</h3>
+                    <p>Si potrebbe partire con un tirocinio per Nicole <span class="cite">[cite: 1]</span>. Le tempistiche del passaggio di consegne (es. un periodo full-time seguito da uno part-time) sarebbero tutte da concordare insieme. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
             <div class="visual-card">
                 <div class="card-icon">👥</div>
                 <div class="card-text">
-                    <h3>Supporto Dipendenti</h3>
-                    <p>Mantenuti per i primi 1-2 anni per garantire supporto operativo totale. <span class="cite">[cite: 1]</span></p>
+                    <h3>Supporto Operativo</h3>
+                    <p>I dipendenti attuali potrebbero essere mantenuti nei primi anni per dare stabilità. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
             <div class="visual-card accent">
                 <div class="card-icon">🇪🇺</div>
                 <div class="card-text">
-                    <h3>Fondi Imprenditoria Femminile</h3>
-                    <p>Requisiti ideali per accedere a fondi perduti o a tasso zero per due giovani donne. <span class="cite">[cite: 1]</span></p>
+                    <h3>Imprenditoria Femminile</h3>
+                    <p>Potremmo esplorare l'accesso a fondi perduti o agevolazioni dedicate. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Slide 7: Visione Futura (NOVITA') -->
+    <div class="slide">
+        <h2>La Visione a Lungo Termine 🌟</h2>
+        <p style="text-align:center;">Oltre la semplice stampa: il potenziale scalabile del progetto.</p>
+        <div class="card-container">
+            <div class="visual-card vision">
+                <div class="card-icon">🎨</div>
+                <div class="card-text">
+                    <h3>Casa di Produzione Creativa</h3>
+                    <p>L'obiettivo è trasformare negli anni la stamperia in un vero e proprio <strong>hub creativo</strong>.</p>
+                </div>
+            </div>
+            <div class="visual-card vision">
+                <div class="card-icon">🤝</div>
+                <div class="card-text">
+                    <h3>Collaborazioni a P.IVA</h3>
+                    <p>Estendere la rete lavorando con designer, illustratori e professionisti esterni a Partita IVA, allargando l'offerta e il portafoglio clienti senza appesantire i costi fissi aziendali.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!-- Controlli Fissi Mobile -->
@@ -257,44 +270,34 @@
 </div>
 
 <script>
-    // Grafico a Barre
     const ctxBar = document.getElementById('barChart').getContext('2d');
     new Chart(ctxBar, {
         type: 'bar',
         data: {
-            labels: ['Utile (90k)', 'Stipendi Socie', 'Rate Debito'],
+            labels: ['Utile Ipotetico', 'Stipendi Stimati', 'Rate Stimate'],
             datasets: [{
                 data: [90000, 60000, 30000],
                 backgroundColor: ['#bdc3c7', '#2ecc71', '#e74c3c'],
                 borderRadius: 8
             }]
         },
-        options: {
-            responsive: true,
-            plugins: { legend: { display: false } },
-            scales: { y: { beginAtZero: true } }
-        }
+        options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
     });
 
-    // Grafico a Ciambella
     const ctxPie = document.getElementById('pieChart').getContext('2d');
     new Chart(ctxPie, {
         type: 'doughnut',
         data: {
-            labels: ['Sostenitori (40k)', 'Fondatori (40k)'],
+            labels: ['Ipotesi Sostenitori (40k)', 'Ipotesi Fondatori (40k)'],
             datasets: [{
                 data: [40000, 40000],
                 backgroundColor: ['#3498db', '#f1c40f'],
                 borderWidth: 0
             }]
         },
-        options: {
-            responsive: true,
-            plugins: { legend: { position: 'bottom' } }
-        }
+        options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
     });
 
-    // Navigazione
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const prevBtn = document.getElementById('prevBtn');
@@ -304,7 +307,6 @@
     function updateButtons() {
         prevBtn.disabled = currentSlide === 0;
         nextBtn.disabled = currentSlide === slides.length - 1;
-        // Scroll in alto al cambio slide su mobile
         container.scrollTo(0, 0); 
     }
 
