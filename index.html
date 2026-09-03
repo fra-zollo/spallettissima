@@ -50,6 +50,7 @@
         .subtitle { text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 30px; font-style: italic; }
         .cite { font-size: 0.6rem; color: #ccc; vertical-align: super; }
         .disclaimer { font-size: 0.85rem; color: #e67e22; text-align: center; font-weight: bold; margin-bottom: 15px; background: #fdf2e9; padding: 10px; border-radius: 8px;}
+        .note-negoziabile { background: #e8f4f8; color: #2980b9; border-left: 4px solid #3498db; padding: 10px 15px; border-radius: 5px; font-size: 0.9rem; margin-bottom: 15px; }
 
         .card-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto; }
         .visual-card {
@@ -79,7 +80,6 @@
             cursor: pointer; transition: background 0.3s; width: 45%; max-width: 200px;
         }
         button:active { transform: scale(0.98); }
-        button:disabled { background-color: #d1d8dd; color: #999; cursor: not-allowed; }
 
         @media (min-width: 768px) {
             .slide { justify-content: center; align-items: center; padding: 40px; }
@@ -101,7 +101,7 @@
     <div class="slide active">
         <h1>La Spallettissima</h1>
         <p class="subtitle">Ipotesi di Passaggio Generazionale 🤝 <span class="cite">[cite: 1]</span></p>
-        <div class="disclaimer">⚠️ Attenzione: Le cifre e le tempistiche in questa presentazione sono stime e ipotesi di lavoro, soggette a futuri accordi e variazioni.</div>
+        <div class="disclaimer">⚠️ Attenzione: Le cifre e le tempistiche in questa presentazione sono stime e ipotesi di lavoro, soggette a futuri accordi.</div>
         
         <div class="card-container" style="margin-top: 10px;">
             <div class="visual-card">
@@ -162,7 +162,7 @@
         <h2>Ipotesi di Sostenibilità 📊</h2>
         <div class="split-layout">
             <div class="text-col">
-                <p>Simulazione basata sui ricavi attuali <span class="cite">[cite: 1]</span> (ipotizzando un Anno 1 "di comporto" dove si reinveste tutto per stabilizzarsi <span class="cite">[cite: 1]</span>):</p>
+                <p>Simulazione basata sui ricavi attuali <span class="cite">[cite: 1]</span> (ipotizzando un Anno 1 "di comporto" dove si reinveste tutto <span class="cite">[cite: 1]</span>):</p>
                 <div class="visual-card">
                     <div class="card-icon">💰</div>
                     <div class="card-text">
@@ -187,9 +187,11 @@
     <!-- Slide 5: Acquisto -->
     <div class="slide">
         <h2>Possibile Accordo 🤝</h2>
+        <div class="note-negoziabile">
+            💡 <strong>Nota Bene:</strong> L'importo totale ipotizzato (80.000 €) e la divisione delle quote (40k/40k) sono puramente indicativi e <strong>totalmente negoziabili</strong> <span class="cite">[cite: 1]</span>. L'obiettivo è chiudere a cifre inferiori (es. 70.000 €).
+        </div>
         <div class="split-layout">
             <div class="text-col">
-                <p>Si ipotizza un acquisto rateizzato valutabile in circa 80.000 € totali <span class="cite">[cite: 1]</span>.</p>
                 <div class="visual-card">
                     <div class="card-icon">🤝</div>
                     <div class="card-text">
@@ -219,14 +221,14 @@
                 <div class="card-icon">🎓</div>
                 <div class="card-text">
                     <h3>Affiancamento Flessibile</h3>
-                    <p>Si potrebbe partire con un tirocinio per Nicole <span class="cite">[cite: 1]</span>. Le tempistiche del passaggio di consegne (es. un periodo full-time seguito da uno part-time) sarebbero tutte da concordare insieme. <span class="cite">[cite: 1]</span></p>
+                    <p>Si potrebbe partire con un tirocinio per Nicole <span class="cite">[cite: 1]</span>. Le tempistiche (es. full-time seguito da part-time) sarebbero da concordare. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
             <div class="visual-card">
                 <div class="card-icon">👥</div>
                 <div class="card-text">
                     <h3>Supporto Operativo</h3>
-                    <p>I dipendenti attuali potrebbero essere mantenuti nei primi anni per dare stabilità. <span class="cite">[cite: 1]</span></p>
+                    <p>I dipendenti attuali potrebbero essere mantenuti nei primi anni. <span class="cite">[cite: 1]</span></p>
                 </div>
             </div>
             <div class="visual-card accent">
@@ -239,10 +241,10 @@
         </div>
     </div>
 
-    <!-- Slide 7: Visione Futura (NOVITA') -->
+    <!-- Slide 7: Visione Futura -->
     <div class="slide">
         <h2>La Visione a Lungo Termine 🌟</h2>
-        <p style="text-align:center;">Oltre la semplice stampa: il potenziale scalabile del progetto.</p>
+        <p style="text-align:center;">Oltre la semplice stampa: il potenziale scalabile.</p>
         <div class="card-container">
             <div class="visual-card vision">
                 <div class="card-icon">🎨</div>
@@ -255,7 +257,35 @@
                 <div class="card-icon">🤝</div>
                 <div class="card-text">
                     <h3>Collaborazioni a P.IVA</h3>
-                    <p>Estendere la rete lavorando con designer, illustratori e professionisti esterni a Partita IVA, allargando l'offerta e il portafoglio clienti senza appesantire i costi fissi aziendali.</p>
+                    <p>Estendere la rete lavorando con designer, illustratori e professionisti esterni, allargando l'offerta e il portafoglio clienti.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Sintesi Finale -->
+    <div class="slide">
+        <h2>In Sintesi 📝</h2>
+        <div class="card-container">
+            <div class="visual-card">
+                <div class="card-icon">1️⃣</div>
+                <div class="card-text">
+                    <h3>L'Occasione</h3>
+                    <p>Salvare un'attività storica e profittevole (90k€ utile <span class="cite">[cite: 1]</span>) abbattendo il rischio iniziale e dividendo l'investimento <span class="cite">[cite: 1]</span>.</p>
+                </div>
+            </div>
+            <div class="visual-card">
+                <div class="card-icon">2️⃣</div>
+                <div class="card-text">
+                    <h3>La Squadra</h3>
+                    <p>Eva e Nicole, supportate ma autonome <span class="cite">[cite: 1]</span>, guidano il rilancio puntando a diventare una casa di produzione.</p>
+                </div>
+            </div>
+            <div class="visual-card accent">
+                <div class="card-icon">3️⃣</div>
+                <div class="card-text">
+                    <h3>Vantaggio per tutti</h3>
+                    <p>I fondatori vedono sopravvivere il nome incassando il capitale <span class="cite">[cite: 1]</span>, le socie si creano un'impresa autonoma, i finanziatori rientrano protetti <span class="cite">[cite: 1]</span>.</p>
                 </div>
             </div>
         </div>
@@ -265,7 +295,7 @@
 
 <!-- Controlli Fissi Mobile -->
 <div class="controls">
-    <button id="prevBtn" onclick="changeSlide(-1)" disabled>Indietro</button>
+    <button id="prevBtn" onclick="changeSlide(-1)">Indietro</button>
     <button id="nextBtn" onclick="changeSlide(1)">Avanti</button>
 </div>
 
@@ -304,9 +334,24 @@
     const nextBtn = document.getElementById('nextBtn');
     const container = document.getElementById('presentation-container');
 
+    // Inizializza i bottoni al caricamento della pagina
+    updateButtons();
+
     function updateButtons() {
-        prevBtn.disabled = currentSlide === 0;
-        nextBtn.disabled = currentSlide === slides.length - 1;
+        // Nasconde il bottone "Indietro" se si è alla prima slide
+        if (currentSlide === 0) {
+            prevBtn.style.visibility = 'hidden';
+        } else {
+            prevBtn.style.visibility = 'visible';
+        }
+        
+        // Nasconde il bottone "Avanti" se si è all'ultima slide
+        if (currentSlide === slides.length - 1) {
+            nextBtn.style.visibility = 'hidden';
+        } else {
+            nextBtn.style.visibility = 'visible';
+        }
+
         container.scrollTo(0, 0); 
     }
 
